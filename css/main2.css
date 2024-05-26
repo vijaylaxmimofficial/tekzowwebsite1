@@ -1,0 +1,200 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Initially invisible */
+}
+
+
+
+.cc-effect:hover .overlay {
+  opacity: 1; /* Make overlay visible on hover */
+}
+
+.text-overlay {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+.shape {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%; /* Makes the shape a circle, adjust as needed */
+  border: 2px solid #007bff; /* Add border color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures the image stays within the shape */
+}
+
+.shape img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures the image fits inside the shape */
+}
+.logo-container {
+  position: fixed;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.logo {
+  width: 150px; /* Adjust as needed */
+  height: auto;
+}
+
+footer {
+  background-color: #08484c;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+footer .footer-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top right, #ffffff, #f8f9fa);
+  clip-path: polygon(60% 0, 80% 20%, 55% 15%, 85% 50%, 85% 85%, 70% 70%, 50% 100%, 30% 70%, 5% 85%, 15% 50%, 5% 15%, 30% 30%);
+  z-index: -1;
+}
+
+footer h3 {
+  color: #fff;
+}
+
+footer p {
+  color: #ccc;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .col-md-4 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.navbar.navbar-transparent {
+  background-color: transparent !important;
+}
+
+.navbar.scrolled {
+  background-color: transparent !important;
+}
+
+.navbar-nav .nav-link {
+  color: initial; /* Use the desired initial color */
+  transition: color 0.3s ease;
+}
+
+.navbar.scrolled .navbar-nav .nav-link {
+  color: black !important;
+  
+}
+.animated-background {
+  background-color: #0b61b7; /* Set background color */
+  animation: animateBackground 10s linear infinite; /* Define animation */
+}
+
+@keyframes animateBackground {
+  0% { background-color:#dfe4e5; } /* Start color */
+  50% { background-color: #f5f5f5; } /* Middle color */
+  100% { background-color:white; } /* End color */
+}
+
+.more-details-link {
+  display: block; /* Changed to block for centering with margin auto */
+  width: 50px; /* Base width for better control */
+  padding: 10px 20px;
+  margin: 0 auto; /* Center the link horizontally */
+  font-weight: bold;
+  background-color: #d75ba4;
+  color: #f7f5f5;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Ensures text is centered in the link */
+}
+
+/* Hover effect */
+.more-details-link:hover {
+  background-color: #2e4348;
+}
+
+
+
+
+
+
+/* Media Queries */
+
+/* For small screens */
+@media (max-width: 600px) {
+  .more-details-link {
+      width: 80%; /* Adjust width as necessary */
+      padding: 10px 0; /* Adjust padding if needed */
+      font-size: 16px; /* Adjust font size for better readability */
+  }
+}
+
+/* For medium screens */
+@media (min-width: 601px) and (max-width: 1200px) {
+  .more-details-link {
+      width: 60%; /* Adjust width as necessary */
+      padding: 10px 15px; /* Adjust padding if needed */
+      font-size: 18px; /* Adjust font size for better readability */
+  }
+}
+
+/* For large screens */
+@media (min-width: 1201px) {
+  .more-details-link {
+      width: 40%; /* Adjust width as necessary */
+      padding: 10px 20px; /* Adjust padding if needed */
+      font-size: 20px; /* Adjust font size for better readability */
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  footer .col-md-4 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-toggler-right {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-toggler-right {
+    display: block;
+  }
+}
